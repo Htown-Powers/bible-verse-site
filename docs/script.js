@@ -40,4 +40,19 @@ function getRandomVerse() {
   const randomVerse = versesArray[Math.floor(Math.random() * versesArray.length)];
 
   display.innerHTML = `<p>"${randomVerse.text}"</p><p><em>${randomVerse.reference}</em></p>`;
+  function copyVerseToClipboard() {
+  const verseDisplay = document.getElementById("verse-display");
+  const textToCopy = verseDisplay.innerText;
+
+  if (!textToCopy) {
+    alert("There is no verse to copy!");
+    return;
+  }
+
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    alert("Verse copied to clipboard!");
+  }).catch(err => {
+    console.error("Failed to copy:", err);
+    alert("Failed to copy the verse.");
+  });
 }
