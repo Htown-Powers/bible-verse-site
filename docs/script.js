@@ -41,7 +41,8 @@ function getRandomVerse() {
 
   display.innerHTML = `<p>"${randomVerse.text}"</p><p><em>${randomVerse.reference}</em></p>`;
 }
-  function copyVerseToClipboard() {
+
+function copyVerseToClipboard() {
   const verseDisplay = document.getElementById("verse-display");
   const textToCopy = verseDisplay.innerText;
 
