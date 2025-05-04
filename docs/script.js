@@ -57,3 +57,4 @@ function copyVerseToClipboard() {
     console.error("Failed to copy:", err);
     alert("Failed to copy the verse.");
   });
+}
