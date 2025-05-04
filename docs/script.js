@@ -40,6 +40,7 @@ function getRandomVerse() {
   const randomVerse = versesArray[Math.floor(Math.random() * versesArray.length)];
 
   display.innerHTML = `<p>"${randomVerse.text}"</p><p><em>${randomVerse.reference}</em></p>`;
+}
   function copyVerseToClipboard() {
   const verseDisplay = document.getElementById("verse-display");
   const textToCopy = verseDisplay.innerText;
